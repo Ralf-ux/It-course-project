@@ -1,0 +1,19 @@
+/* Ensure images load properly */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shift during image loading */
+.card-rounded img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Smooth transitions for responsive changes */
+@media (prefers-reduced-motion: no-preference) {
+  .card-rounded {
+    transition: transform 0.3s ease;
+  }
+}
